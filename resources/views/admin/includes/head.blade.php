@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin-panel/assets/images/favicon.png')}}">
-    <title>Admin Dashboard - Employment management system</title>
+    <title>Admin Dashboard - Employment management SIMPER</title>
     <!-- Custom CSS -->
     <link href="{{asset('admin-panel/assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
 

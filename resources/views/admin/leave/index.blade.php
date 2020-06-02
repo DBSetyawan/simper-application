@@ -121,7 +121,6 @@
                                                         @endif
                                                     @endif
                                                 </td>
-
                                                         <td>
                                                             @if(Auth::user()->role=='admin')
                                                             {{--{{$leave->is_approved}}--}}
@@ -137,7 +136,7 @@
                                                                     <button type="submit" onclick="return confirm('Are you sure want to reject leave?')" class="btn btn-sm btn-danger" name="approve" value="2">Reject</button>
                                                                 </form>
                                                             @elseif($leave->is_approved==1)
-
+                                                                <a href="{{ route('invoice.print', $leave->id) }}" class="btn btn-sm btn-warning">Print</a>
                                                                 <form action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                     @csrf
                                                                     <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to reject leave?')" type="submit" name="approve" value="2">Reject</button>
@@ -251,7 +250,7 @@
             {{--</script>--}}
             {{--sweetalert box for deleting end--}}
             <footer class="footer text-center">
-                All Rights Reserved by Khoz Informatics Pvt. Ltd. Designed and Developed by <a href="https://khozinfo.com/">Khozinfo</a>.
+                All Rights Reserved by Daniel Budi Setaywan Designed and Developed by <a href="https://dbsetyawan.github.io/portfolio">Daniel Budi Setyawan</a>.
             </footer>
         </div>
     </div>

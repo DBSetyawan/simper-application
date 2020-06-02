@@ -40,7 +40,7 @@
                                             <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
                                             <div class="m-l-10">
                                                 <h5 class="m-b-0">Event today</h5>
-                                                <span class="mail-desc">Khozinfo</span>
+                                                <span class="mail-desc">Daniel Setyawan</span>
                                             </div>
                                         </div>
                                     </a>

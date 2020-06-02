@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use PDF;
 use App\Leave;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,6 +38,14 @@ class LeaveController extends Controller
     public function create()
     {
         return view('admin.leave.create');
+    }
+
+    public function generateInvoice($id){
+
+        $leave = Leave::find($id);
+
+        $pdf = PDF::loadView('invoice.print', compact('leave'))->setPaper('a4', 'potrait');
+        return $pdf->stream();
     }
 
     /**

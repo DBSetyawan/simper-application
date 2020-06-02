@@ -91,6 +91,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('leave/paid/{id}',        [ 'as'=>'leave.paid',        'uses' => 'LeaveController@paid']);
 //    Route::post('leave/pending/{id}',        [ 'as'=>'leave.pending',        'uses' => 'LeaveController@pending']);
 //    Route::post('leave/reject/{id}',        [ 'as'=>'leave.reject',        'uses' => 'LeaveController@reject']);
+    Route::group(['prefix' => 'invoice'], function() {
+        //[.. CODE SEBELUMNYA ..]
+        Route::get('/{id}/print', 'LeaveController@generateInvoice')->name('invoice.print');
+    });
 
     Route::get('total-leave',               [ 'as'=>'total-leave',              'uses' => 'TotalLeaveController@index']);
     Route::get('total-leave/create',        [ 'as'=>'total-leave.create',       'uses' => 'TotalLeaveController@create']);
