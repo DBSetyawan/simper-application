@@ -77,9 +77,6 @@
                                 <div class="card-body b-l calender-sidebar">
                                     <div id="calendar">
                                             <div class="panel panel-default">
-                                                <div class="panel-heading" style="background: #2e642e; color: white">
-                                                    Full calendar
-                                                </div>
                                                 <div class="panel-body">
                                                     {!! $calendar->calendar() !!}
                                                     {!! $calendar->script() !!}
