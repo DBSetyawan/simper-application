@@ -74,29 +74,19 @@
                                     <h4 class="card-title">Calendar</h4>
                                 </div>
                             </div>
-                            <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="card-body b-l calender-sidebar">
-                                            <div id="calendar">
-
-                                                <div class="row">
-                                                    <div class="col-md-8 col-md-offset-2">
-                                                        <div class="panel panel-default">
-                                                            <div class="panel-heading" style="background: #2e642e; color: white">
-                                                                Full calendar
-                                                            </div>
-                                                            <div class="panel-body">
-                                                                {!! $calendar->calendar() !!}
-                                                                {!! $calendar->script() !!}
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                <div class="card-body b-l calender-sidebar">
+                                    <div id="calendar">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" style="background: #2e642e; color: white">
+                                                    Full calendar
                                                 </div>
-
+                                                <div class="panel-body">
+                                                    {!! $calendar->calendar() !!}
+                                                    {!! $calendar->script() !!}
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>

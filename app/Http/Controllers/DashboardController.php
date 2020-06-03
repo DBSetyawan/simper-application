@@ -49,19 +49,19 @@ class DashboardController extends Controller
             //   } 
             $totalLeave_pending = $query->count();
         //    die;
-        $events = Calendar::all();
+        $events = Leave::all();
         $event = [];
 
         foreach ($events as $row){
 //            $enddate = $row->end_date."24:00:00";
             $event[] = \Calendar::event(
-                $row->title,
+                $row->leave_type,
                 false,
-                new \DateTime($row->start_date),
-                new \DateTime($row->end_date),
+                new \DateTime($row->date_from),
+                new \DateTime($row->date_to),
                 $row->id,
                 [
-                    'color'=>$row->color,
+                    'color'=> "red",
                 ]
             );
         }
