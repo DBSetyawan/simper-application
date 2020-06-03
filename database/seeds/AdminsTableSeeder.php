@@ -13,12 +13,12 @@ class AdminsTableSeeder extends Seeder
     {
         DB::table('admins')->insert([
            'created_at' => \Carbon\Carbon::now(),
-           'username' => 'ganesh',
+           'username' => 'Kusuma Yudha Ramadhani',
             'image' => '',
-            'first_name' => 'ganesh',
-            'last_name' => 'khadka',
-            'email' => 'ganesh46@gmail.com',
-            'password' => bcrypt('admin123'),
+            'first_name' => 'Kusuma',
+            'last_name' => 'Ramadhani',
+            'email' => 'rrver@gmail.com',
+            'password' => bcrypt('rrver123'),
             'status' => '1',
         ]);
     }
