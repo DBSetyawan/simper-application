@@ -61,7 +61,7 @@ class DashboardController extends Controller
                 new \DateTime($row->date_to),
                 $row->id,
                 [
-                    'color'=> "red",
+                    'color'=> "green",
                 ]
             );
         }
