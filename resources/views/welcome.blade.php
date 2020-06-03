@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sistem Informasi Manajemen Permohonan (SIMPER)
+                    Sistem Informasi Manajemen Permohonan
                 </div>
 
             </div>
