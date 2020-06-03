@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Surat Permohonan Cuti Karyawan</title>
+	<title>Surat Permohonan Cuti</title>
 	<style type="text/css">
 	
 		.center{
