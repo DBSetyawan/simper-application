@@ -38,7 +38,7 @@
                     <div class="card card-hover">
                         <div class="box bg-warning text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                            <h5 class="m-b-0 m-t-5 text-white">25</h5>
+                            <h5 class="m-b-0 m-t-5 text-white">{{ $totalLeave_pending }}</h5>
                             <h6 class="text-white">Total leaves</h6>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="card card-hover">
                         <div class="box bg-danger text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                            <h5 class="m-b-0 m-t-5 text-white">2</h5>
+                            <h5 class="m-b-0 m-t-5 text-white">{{ $totalLeave }}</h5>
                             <h6 class="text-white">On leave</h6>
                         </div>
                     </div>
@@ -77,7 +77,23 @@
                             <div class="row">
                                     <div class="col-lg-12">
                                         <div class="card-body b-l calender-sidebar">
-                                            <div id="calendar"></div>
+                                            <div id="calendar">
+
+                                                <div class="row">
+                                                    <div class="col-md-8 col-md-offset-2">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading" style="background: #2e642e; color: white">
+                                                                Full calendar
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                {!! $calendar->calendar() !!}
+                                                                {!! $calendar->script() !!}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                             </div>
