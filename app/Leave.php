@@ -20,6 +20,8 @@ class Leave extends Model
         'reason'
     ];
 
+    protected $dates = ['date_from'];
+
     public function users()
     {
         return $this->belongsTo('App\User', 'employee_id');

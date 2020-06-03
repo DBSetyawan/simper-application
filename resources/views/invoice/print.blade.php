@@ -31,6 +31,7 @@
 	</style>
 </head>
 <body>
+    {{-- {{ dd($leave) }} --}}
     <div style="position:absolute;left:264.84px;top:76.54px" class="cls_012"><span class="cls_012">“LAMPIRAN”</span></div>
         <div style="position:absolute;left:133.44px;top:105.10px" class="cls_007"><span class="cls_007">PERMOHONAN PEMANFAATAN HAK CUTI TAHUNAN</span></div>
         <div style="position:absolute;left:72.00px;top:133.79px" class="cls_004"><span class="cls_004">1.  Nama Pemohon</span></div>
@@ -67,9 +68,9 @@
 
         <div style="position:absolute;left:72.00px;top:437.63px" class="cls_009"><span class="cls_009">Keterangan Jumlah</span><span class="cls_004"> :</span></div>
         <div style="position:absolute;left:72.00px;top:451.43px" class="cls_004"><span class="cls_004">Hak Cuti</span></div>
-        <div style="position:absolute;left:354.00px;top:451.43px" class="cls_004"><span class="cls_004">(Otomatis dari sistem )</span></div>
+        <div style="position:absolute;left:354.00px;top:451.43px" class="cls_004"><span class="cls_004">( {{ $leave->days }} Hari )</span></div>
         <div style="position:absolute;left:72.00px;top:465.23px" class="cls_004"><span class="cls_004">Cuti yang sudah dilaksanakan</span></div>
-        <div style="position:absolute;left:354.00px;top:465.23px" class="cls_004"><span class="cls_004">(Otomatis dari sistem )</span></div>
+        <div style="position:absolute;left:354.00px;top:465.23px" class="cls_004"><span class="cls_004">( {{ $leave->date_from->isoFormat("dddd")}}, {{ $leave->date_from->isoFormat("MMMM Do YYYY") }} )</span></div>
         <div style="position:absolute;left:72.00px;top:479.03px" class="cls_004"><span class="cls_004">Permohonan Cuti</span></div>
         <div style="position:absolute;left:358.32px;top:479.03px" class="cls_013"><span class="cls_013">………………………  </span><span class="cls_004">(-)</span></div>
         <div style="position:absolute;left:72.00px;top:492.83px" class="cls_004"><span class="cls_004">Sisa Hak Cuti</span></div>
@@ -112,8 +113,10 @@
         <div style="position:absolute;left:440.28px;top:749.87px" class="cls_004"><span class="cls_004">(</span></div>
         <div style="position:absolute;left:544.19px;top:749.87px" class="cls_004"><span class="cls_004">)</span></div>
         <div style="position:absolute;left:135.72px;top:763.67px" class="cls_004"><span class="cls_004">Kepala</span></div>
-        <div style="position:absolute;left:271.52px;top:751.67px" class="cls_004"><span class="cls_004"><span class="cls_013">_________________</span><span class="cls_004"></span></span></div>
-        <div style="position:absolute;left:444.52px;top:751.67px" class="cls_004"><span class="cls_004"><span class="cls_013">_______________</span><span class="cls_004"></span></span></div>
+        <div style="position:absolute;left:272.52px;top:748.67px" class="cls_004"><span class="cls_004"><span class="cls_013">.................................</span><span class="cls_004"></span></span></div>
+        {{-- <div style="position:absolute;left:271.52px;top:751.67px" class="cls_004"><span class="cls_004"><span class="cls_013">_________________</span><span class="cls_004"></span></span></div> --}}
+        <div style="position:absolute;left:444.52px;top:748.67px" class="cls_004"><span class="cls_004"><span class="cls_013">..............................</span><span class="cls_004"></span></span></div>
+        {{-- <div style="position:absolute;left:444.52px;top:751.67px" class="cls_004"><span class="cls_004"><span class="cls_013">_______________</span><span class="cls_004"></span></span></div> --}}
             <div style="position:absolute;left:414.52px;top:653.67px" class="cls_004"><span class="cls_004">
                 <span style="border-left: 1px solid black; 
                 height: 127px; 
