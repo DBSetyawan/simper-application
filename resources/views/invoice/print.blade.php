@@ -54,7 +54,7 @@
         <div style="position:absolute;left:312.96px;top:244.79px" class="cls_004"><span class="cls_004">: ……………………………………………</span></div>
             {{--  <div style="position:absolute;left:435.60px;top:244.79px" class="cls_004"><span class="cls_004">………………</span></div>  --}}
         <div style="position:absolute;left:72.00px;top:260.75px" class="cls_004"><span class="cls_004">9.  PJ Pekerjaan Selama cuti</span></div>
-        <div style="position:absolute;left:312.96px;top:260.75px" class="cls_004"><span class="cls_004">:</span></div>
+        <div style="position:absolute;left:312.96px;top:260.75px" class="cls_004"><span class="cls_004">: ……………………………………………</span></div>
         <div style="position:absolute;left:72.00px;top:276.59px" class="cls_004"><span class="cls_004">10. Tanda Tangan Persetujuan Penanggung</span></div>
         <div style="position:absolute;left:114.00px;top:292.43px" class="cls_004"><span class="cls_004">Jawab Pekerjaan Selama Cuti</span></div>
         <div style="position:absolute;left:312.96px;top:292.43px" class="cls_004"><span class="cls_004">:</span></div>
