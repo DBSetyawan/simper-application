@@ -7,7 +7,7 @@ class AdminsTableSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
+     * @return voids
      */
     public function run()
     {
