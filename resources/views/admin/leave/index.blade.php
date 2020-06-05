@@ -67,7 +67,7 @@
                                             <th>Date to</th>
                                             <th>No. of days</th>
                                             <th>Reason</th>
-                                            <th>Leave type offer</th>
+                                            {{-- <th>Leave type offer</th> --}}
                                             <th>Action</th>
                                         </tr>
                                         </thead>
@@ -77,33 +77,33 @@
                                                 <td>{{$loop -> index+1 }}</td>
                                                 <td>{{$leave->users->username }}</td>
                                                 <td>{{$leave->leave_type}}</td>
-                                                <td>{{$leave->date_from}}</td>
-                                                <td>{{$leave->date_to}}</td>
+                                                <td>{{$leave->date_from->isoFormat("dddd, MMMM Do YYYY")}}</td>
+                                                <td>{{Carbon::parse($leave->date_to)->isoFormat("dddd, MMMM Do YYYY")}}</td>
                                                 <td>{{$leave->days}}</td>
                                                 <td>{{$leave->reason}}</td>
-                                                <td>
+                                                {{-- <td> --}}
                                                     @if(Auth::user()->role=='admin')
                                                         {{--{{$leave->is_approved}}--}}
                                                         @if($leave->leave_type_offer==0)
-                                                        <div class="card-body">
+                                                        {{-- <div class="card-body">
                                                             <div class="form-group row">
                                                                 <div class="col-sm-5">
                                                                     <form id="{{$leave->id}}" action="{{route('leave.paid',$leave->id)}}" method="POST">
                                                                         @csrf
                                                                         {{--<button type="button" onclick="approveLeave({{$leave->id}})" class="btn btn-sm btn-cyan" name="approve" value="1">Approve</button>--}}
-                                                                        <button type="submit" onclick="return confirm('Are you sure want to paid for leave?')" class="btn btn-sm btn-cyan" name="paid" value="1">Paid</button>
+                                                                        {{-- <button type="submit" onclick="return confirm('Are you sure want to paid for leave?')" class="btn btn-sm btn-cyan" name="paid" value="1">Paid</button>
                                                                     </form>
                                                                 </div>
                                                                 <div class="col-sm-1">
                                                                     <form id="{{$leave->id}}" action="{{route('leave.paid',$leave->id)}}" method="POST">
                                                                         @csrf
                                                                         {{--<button type="button" onclick="rejectLeave({{$leave->id}})" class="btn btn-sm btn-danger" name="approve" value="2">Reject</button>--}}
-                                                                        <button type="submit" onclick="return confirm('Are you sure want to paid for leave?')" class="btn btn-sm btn-danger" name="paid" value="2">Unpaid</button>
+                                                                        {{-- <button type="submit" onclick="return confirm('Are you sure want to paid for leave?')" class="btn btn-sm btn-danger" name="paid" value="2">Unpaid</button>
                                                                     </form>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        @elseif($leave->leave_type_offer==1)
+                                                        </div> --}}
+                                                        {{-- @elseif($leave->leave_type_offer==1)
                                                             <form action="{{route('leave.paid',$leave->id)}}" method="POST">
                                                                 @csrf
                                                                 <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to unpaid for leave?')" type="submit" name="paid" value="2">Unpaid</button>
@@ -113,21 +113,22 @@
                                                                 @csrf
                                                                 <button class="btn btn-sm btn-cyan" onclick="return confirm('Are you sure want to piad for leave?')" type="submit" name="paid" value="1">Paid</button>
                                                             </form>
+                                                        @endif --}}
                                                         @endif
 
                                                         {{--<a href="{{route('leave.approve',$leave->id)}}" class="btn btn-sm btn-cyan">Approve</a>--}}
                                                         {{--<a href="{{route('leave.pending',$leave->id)}}" class="btn btn-sm btn-warning">Pending</a>--}}
                                                         {{--<a href="{{route('leave.reject',$leave->id)}}" class="btn btn-sm btn-danger">Reject</a>--}}
                                                     @else
-                                                        @if($leave->leave_type_offer==0)
+                                                        {{-- @if($leave->leave_type_offer==0)
                                                             <span class="badge badge-pill badge-warning">Pending</span>
                                                         @elseif($leave->leave_type_offer==1)
                                                             <span class="badge badge-pill badge-success">Paid</span>
                                                         @else
                                                             <span class="badge badge-pill badge-danger">Unpaid</span>
-                                                        @endif
+                                                        @endif --}}
                                                     @endif
-                                                </td>
+                                                {{-- </td> --}}
                                                         <td>
                                                             @if(Auth::user()->role=='admin')
                                                             {{--{{$leave->is_approved}}--}}
