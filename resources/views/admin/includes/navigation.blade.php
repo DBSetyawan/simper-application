@@ -10,7 +10,7 @@
                 </b>
                 <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="{{asset('admin-panel/assets/images/logo-text.png')}}" alt="homepage" class="light-logo" />
+                             {{-- <img src="{{asset('admin-panel/assets/images/logo-text.png')}}" alt="homepage" class="light-logo" /> --}}
 
                         </span>
             </a>
