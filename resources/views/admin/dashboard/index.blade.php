@@ -19,7 +19,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container-fluid">
 
             <div class="row">
@@ -50,16 +49,6 @@
                             <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
                             <h5 class="m-b-0 m-t-5 text-white">{{ $totalLeave }}</h5>
                             <h6 class="text-white">On leave</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-cyan text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
-                            <h5 class="m-b-0 m-t-5 text-white">6</h5>
-                            <h6 class="text-white">Designation</h6>
                         </div>
                     </div>
                 </div>
@@ -100,22 +89,4 @@
 @endsection
 
 @section('js')
-
-    <script src="{{asset('admin-panel/assets/libs/flot/excanvas.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot/jquery.flot.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot/jquery.flot.pie.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot/jquery.flot.time.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot/jquery.flot.stack.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot/jquery.flot.crosshair.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
-    <script src="{{asset('admin-panel/dist/js/pages/chart/chart-page-init.js')}}"></script>
-
-    <script src="{{asset('admin-panel/assets/libs/jquery/dist/jquery.min.js')}}"></script>
-    <script src="{{asset('admin-panel/dist/js/jquery-ui.min.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('admin-panel/dist/js/custom.min.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/moment/min/moment.min.js')}}"></script>
-    <script src="{{asset('admin-panel/assets/libs/fullcalendar/dist/fullcalendar.min.js')}}"></script>
-    <script src="{{asset('admin-panel/dist/js/pages/calendar/cal-init.js')}}"></script>
-
-    @endsection
+@endsection
