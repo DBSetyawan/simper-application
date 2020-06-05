@@ -60,7 +60,7 @@
                         <div class="card-body">
                             <div class="d-md-flex align-items-center">
                                 <div>
-                                    <h4 class="card-title">Calendar</h4>
+                                    <h4 class="card-title">Informasi cuti karyawan - SIMPER [v1.0.0-beta]</h4>
                                 </div>
                             </div>
                                 <div class="card-body b-l calender-sidebar">
