@@ -27,11 +27,13 @@
             <div class="lds-pos"></div>
         </div>
     </div>
-    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-        <div class="auth-box bg-dark border-top border-secondary">
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-light">
+        <div class="auth-box ql-bg-purple border-top border-secondary">
             <div id="loginform">
                 <div class="text-center p-t-20 p-b-20">
-                    <span class="db"><img src="{{asset('admin-panel/assets/images/logo.png')}}" alt="logo" /></span>
+                    <span><div class="alert alert-success" role="alert">
+                        [ SIMPER ] application version v1.0.0-beta
+                      </div></span>
                 </div>
                 <!-- Form -->
                 {{--<form class="form-horizontal m-t-20" id="loginform" action="index.html">--}}
@@ -67,8 +69,8 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <div class="p-t-20">
-                                    <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Lost password?</button>
-                                    <button class="btn btn-success float-right" type="submit">Login</button>
+                                    {{-- <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Lost password?</button> --}}
+                                    <button class="btn btn-outline-info btn-lg btn-block" type="submit">Login</button>
                                 </div>
                             </div>
                         </div>
