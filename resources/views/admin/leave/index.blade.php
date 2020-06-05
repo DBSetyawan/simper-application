@@ -134,37 +134,30 @@
                                                             {{--{{$leave->is_approved}}--}}
                                                             @if($leave->is_approved==0)
                                                             <div class="card-body">
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-6">
+                                                                <div class="btn-group" role="group" aria-label="Basic example">
+
                                                                         <form id="approve-leave-{{$leave->id}}" action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                             @csrf
                                                                             {{--<button type="button" onclick="approveLeave({{$leave->id}})" class="btn btn-sm btn-cyan" name="approve" value="1">Approve</button>--}}
                                                                             <button type="submit" onclick="return confirm('Are you sure want to approve leave?')" class="btn btn-sm btn-cyan" name="approve" value="1">Approve</button>
                                                                         </form>
-                                                                    </div>
-                                                                    <div class="col-sm-1">
                                                                         <form id="reject-leave-{{$leave->id}}" action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                             @csrf
                                                                             {{--<button type="button" onclick="rejectLeave({{$leave->id}})" class="btn btn-sm btn-danger" name="approve" value="2">Reject</button>--}}
                                                                             <button type="submit" onclick="return confirm('Are you sure want to reject leave?')" class="btn btn-sm btn-danger" name="approve" value="2">Reject</button>
                                                                         </form>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         @elseif($leave->is_approved==1)
-                                                            <div class="card-body">
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-5">
+                                                            {{-- <div class="card-body"> --}}
+                                                                <div class="btn-group" role="group" aria-label="Basic example">
                                                                         <a href="{{ route('invoice.print', $leave->id) }}" class="btn btn-sm btn-warning">Print</a>
-                                                                    </div>
-                                                                    <div class="col-md-1">
                                                                         <form action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                             <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to reject leave?')" type="submit" name="approve" value="2">Reject</button>
                                                                             @csrf
                                                                         </form>
-                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                            {{-- </div> --}}
                                                             @else
                                                                 <form action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                     @csrf

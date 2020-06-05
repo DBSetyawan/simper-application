@@ -95,14 +95,16 @@
                                                     city="{{$user->city}}"
                                                     age="{{$user->age}}"
                                                     class="view-data btn btn-sm btn-success">View</button>
-                                            <a href="{{route('user.edit',$user->id)}}" class="btn btn-sm btn-dark">Edit</a>
-                                            {{--<a href="{{route('managesalary.detail',$user->id)}}" class="btn btn-sm btn-warning">Payment</a>--}}
-                                            <a href="{{route('managesalary.detail',$user->id)}}" class="btn btn-sm btn-warning">Payment</a>
-                                            <form id="delete-form-{{ $user->id }}" action="{{route('user.delete',$user->id)}}" method="put">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="button" onclick="deletePost({{ $user->id }})" class="btn btn-sm btn-danger">Delete</button>
-                                            </form>
+                                                <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <a href="{{route('user.edit',$user->id)}}" class="btn btn-sm btn-dark">Edit</a>
+                                                    {{--<a href="{{route('managesalary.detail',$user->id)}}" class="btn btn-sm btn-warning">Payment</a>--}}
+                                                    {{-- <a href="{{route('managesalary.detail',$user->id)}}" class="btn btn-sm btn-warning">Payment</a> --}}
+                                                    <form id="delete-form-{{ $user->id }}" action="{{route('user.delete',$user->id)}}" method="put">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="button" onclick="deletePost({{ $user->id }})" class="btn btn-sm btn-danger">Delete</button>
+                                                    </form>
+                                            </div>
                                         </td>
                                     </tr>
 
