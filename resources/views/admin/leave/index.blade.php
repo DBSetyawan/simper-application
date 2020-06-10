@@ -150,13 +150,13 @@
                                                             </div>
                                                         @elseif($leave->is_approved==1)
                                                             {{-- <div class="card-body"> --}}
-                                                                {{-- <div class="btn-group" role="group" aria-label="Basic example">
+                                                                <div class="btn-group" role="group" aria-label="Basic example">
                                                                         <a href="{{ route('invoice.print', $leave->id) }}" class="btn btn-sm btn-warning">Print</a>
-                                                                        <form action="{{route('leave.approve',$leave->id)}}" method="POST">
+                                                                        {{-- <form action="{{route('leave.approve',$leave->id)}}" method="POST">
                                                                             <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to reject leave?')" type="submit" name="approve" value="2">Reject</button>
                                                                             @csrf
-                                                                        </form>
-                                                                </div> --}}
+                                                                        </form> --}}
+                                                                </div>
                                                             {{-- </div> --}}
                                                             @else
                                                                 <form action="{{route('leave.approve',$leave->id)}}" method="POST">
