@@ -91,7 +91,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('leave/paid/{id}',        [ 'as'=>'leave.paid',        'uses' => 'LeaveController@paid']);
 //    Route::post('leave/pending/{id}',        [ 'as'=>'leave.pending',        'uses' => 'LeaveController@pending']);
 //    Route::post('leave/reject/{id}',        [ 'as'=>'leave.reject',        'uses' => 'LeaveController@reject']);
-    Route::group(['prefix' => 'invoice'], function() {
+    Route::group(['prefix' => 'surat-permohonan-cuti-karyawan'], function() {
         //[.. CODE SEBELUMNYA ..]
         Route::get('/{id}/print', 'LeaveController@generateInvoice')->name('invoice.print');
     });
