@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sistem Informasi Manajemen Permohonan
+                    Sistem Informasi Manajemen Permohonan test
                 </div>
 
             </div>
